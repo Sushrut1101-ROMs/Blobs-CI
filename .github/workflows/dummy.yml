@@ -18,3 +18,11 @@ env:
 defaults:
   run:
     shell: bash
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+       - name: Checkouts
+         uses: actions/checkout@v2
