@@ -33,3 +33,7 @@ jobs:
               git config --global user.email $GITHUB_EMAIL
               git config --global credential.helper store
               echo "https://${GITHUB_USERNAME}:${GIT_TOKEN}@github.com" > ~/.git-credentials
+        
+        - name: Clone the Scripts
+          run: |
+              git clone --depth=1 https://github.com/ShivamKumarJha/android_tools.git
