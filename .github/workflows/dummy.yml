@@ -11,7 +11,7 @@ env:
   DUMP_URL: # Git URL of the Dump
   
   # Github
-  GITHUB_USERNAME: Sushrut1101
+  GITHUB_USER: Sushrut1101
   GITHUB_EMAIL: guptasushrut@gmail.com
   GIT_TOKEN: ${{ secrets.GH_TOKEN }}
 
@@ -29,10 +29,10 @@ jobs:
 
        - name: Configuring git and Storing Credentials
          run: |
-              git config --global user.name $GITHUB_USERNAME
+              git config --global user.name $GITHUB_USER
               git config --global user.email $GITHUB_EMAIL
               git config --global credential.helper store
-              echo "https://${GITHUB_USERNAME}:${GIT_TOKEN}@github.com" > ~/.git-credentials
+              echo "https://${GITHUB_USER}:${GIT_TOKEN}@github.com" > ~/.git-credentials
         
         - name: Clone the Scripts
           run: |
