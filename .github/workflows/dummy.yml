@@ -41,3 +41,9 @@ jobs:
         - name: Clone the Dump
           run: |
               git clone --depth=1 ${DUMP_URL} ~/dump
+
+        - name: Setup the Scripts
+          working-directory: android_tools
+          run: |
+              chmod +x setup.sh
+              sudo bash setup.sh
