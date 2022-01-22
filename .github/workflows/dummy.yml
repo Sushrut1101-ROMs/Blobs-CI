@@ -27,7 +27,9 @@ jobs:
        - name: Checkouts
          uses: actions/checkout@v2
 
-       - name: Configuring Git...
+       - name: Configuring git and Storing Credentials
          run: |
               git config --global user.name $GITHUB_USERNAME
               git config --global user.email $GITHUB_EMAIL
+              git config --global credential.helper store
+              echo "https://${GITHUB_USERNAME}:${GIT_TOKEN}@github.com" > ~/.git-credentials
