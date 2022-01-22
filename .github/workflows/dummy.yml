@@ -37,3 +37,7 @@ jobs:
         - name: Clone the Scripts
           run: |
               git clone --depth=1 https://github.com/ShivamKumarJha/android_tools.git
+        
+        - name: Clone the Dump
+          run: |
+              git clone --depth=1 ${DUMP_URL} ~/dump
