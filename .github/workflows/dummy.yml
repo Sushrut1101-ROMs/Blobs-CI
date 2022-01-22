@@ -1,0 +1,20 @@
+name: Generate Dummy Trees
+
+on:
+  push:
+    paths-ignore:
+      - '*.md'
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  DUMP_URL: # Git URL of the Dump
+  
+  # Github
+  GITHUB_USERNAME: Sushrut1101
+  GITHUB_EMAIL: guptasushrut@gmail.com
+  GIT_TOKEN: ${{ secrets.GH_TOKEN }}
+
+defaults:
+  run:
+    shell: bash
