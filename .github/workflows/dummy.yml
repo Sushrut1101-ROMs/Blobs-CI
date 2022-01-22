@@ -1,14 +1,14 @@
 name: Generate Dummy Trees
 
 on:
-  push:
-    paths-ignore:
-      - '*.md'
-    branches: [ main ]
   workflow_dispatch:
+    inputs:
+      DUMP_URL:
+        description: "Git URL of the Dump"
+        required: true
 
 env:
-  DUMP_URL: # Git URL of the Dump
+  DUMP_URL: ${{ github.event.inputs.DUMP_URL }}
   
   # Github
   GITHUB_USER: Sushrut1101
