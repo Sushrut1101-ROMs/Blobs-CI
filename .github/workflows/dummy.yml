@@ -48,7 +48,12 @@ jobs:
               chmod +x setup.sh
               sudo bash setup.sh
 
-        - name: Generate a Dummy Device Tree
+        - name: Generate Dummy Device Tree
           working-directory: android_tools
           run: |
               ./tools/dummy_dt.sh ~/dump
+
+        - name: Generate the Vendor Tree
+          working-directory: android_tools
+          run: |
+              ./tools/vendor_tree.sh ~/dump
